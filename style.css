@@ -1,0 +1,140 @@
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+.series, .episodes {
+  max-width: 758px;
+}
+
+.episodes {
+  display: none;
+}
+
+.episode, .next_episode {
+  background: lightgrey;
+  color: black;
+  min-height: 3em;
+  line-height: 3em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.episode:nth-child(even) {
+  background: rgb(230, 230, 230);
+}
+
+.next_episode {
+  background: rgb(103, 209, 103);
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 758px;
+}
+
+.loading, .controls {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 758px;
+}
+
+.loading img {
+  width: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#controls {
+  background: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  max-width: 758px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#controls_padder {
+  height: 50px;
+}
+
+.button {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+
+#pausebutton {
+  margin-left: 20px;
+}
+
+#pausebutton:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10.5px;
+  left: 12.5px;
+  margin: 0 auto;
+  background: white;
+  width: 17px;
+  height: 17px;
+}
+
+#pausebutton:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10.5px;
+  left: 18px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 5px;
+  height: 17px;
+}
+
+#stopbutton:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10.5px;
+  left: 12.5px;
+  margin: 0 auto;
+  background: white;
+  width: 17px;
+  height: 17px;
+}
+
+#search {
+  margin-top: 10px;
+}
+
+input:focus {
+  font-size: 16px!important
+}
