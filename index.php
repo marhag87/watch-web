@@ -4,8 +4,8 @@
   <script type="text/javascript">
   <!--
     function toggle_visibility(id) {
-       $(".episodes").hide();
        var e = document.getElementById(id);
+       $(".episodes").not(e).hide();
        if(e.style.display == 'block')
           e.style.display = 'none';
        else
