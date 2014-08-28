@@ -4,6 +4,7 @@
   <script type="text/javascript">
   <!--
     function toggle_visibility(id) {
+       $(".episodes").hide();
        var e = document.getElementById(id);
        if(e.style.display == 'block')
           e.style.display = 'none';
@@ -23,10 +24,14 @@
         console.log( "Request failed:" + textStatus );
       });
     }
+    function toggle_anchor_series() {
+      toggle_visibility(window.location.hash.substring(1).replace("_series", "_episodes"));
+    }
     $(window).load(function() {
       $('#all_series>.series').tsort("",{attr:"id"});
       $('#loading').hide();
       $('#content').show();
+      toggle_anchor_series();
       $('#search').on('keyup', function() {
         var val = $.trim(this.value);
         $(".series").hide();
