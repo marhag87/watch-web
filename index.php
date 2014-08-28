@@ -99,8 +99,9 @@
       <div class="controls" id="controls">
         <div class="middle">
           <div class="inner">
-            <div class="button" id="pausebutton" onClick="send_command('pause')"></div>
-            <div class="button" id="stopbutton" onClick="send_command('stop')"></div>
+            <div class="button" id="pausebutton" onClick="send_command('pause')"><img src="pause.png"></img></div>
+            <div class="button" id="stopbutton" onClick="send_command('stop')"><img src="stop.png"></img></div>
+            <div class="button" id="fullstopbutton" onClick="send_command('fullstop')"><img src="eject.png"></img></div>
             <div id="searchbar"><input type="search" name="filter" id="search" value="" tabindex=1 /></div>
           </div>
         </div>
