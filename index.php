@@ -25,7 +25,9 @@
       });
     }
     function toggle_anchor_series() {
-      toggle_visibility(window.location.hash.substring(1).replace("_series", "_episodes"));
+      var hash = window.location.hash.substring(1);
+      if(hash.length >= 1)
+        toggle_visibility(hash.replace("_series", "_episodes"));
     }
     $(window).load(function() {
       $('#all_series>.series').tsort("",{attr:"id"});
