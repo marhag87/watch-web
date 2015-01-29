@@ -29,18 +29,25 @@
       if(hash.length >= 1)
         toggle_visibility(hash.replace("_series", "_episodes"));
     }
+    function search(){
+      searchbar = document.getElementById("search");
+      var val = $.trim(searchbar.value);
+      $(".series").hide();
+      $(".series").filter(function() {
+        return $(this).data('filter').toLowerCase().indexOf(val.toLowerCase()) != -1
+      }).show();
+      localStorage.setItem("filter", searchbar.value);
+    }
     $(window).load(function() {
       $('#all_series>.series').tsort("",{attr:"id"});
       $('#loading').hide();
       $('#content').show();
       toggle_anchor_series();
-      $('#search').on('keyup', function() {
-        var val = $.trim(this.value);
-        $(".series").hide();
-        $(".series").filter(function() {
-          return $(this).data('filter').toLowerCase().indexOf(val.toLowerCase()) != -1
-        }).show();
-      });
+      if (localStorage.getItem("filter") != undefined){
+        document.getElementById("search").value = localStorage.getItem("filter");
+      }
+      $('#search').keyup(search);
+      search();
     });
   //-->
   //</script>
