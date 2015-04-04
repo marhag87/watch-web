@@ -111,6 +111,8 @@
             <div class="button" id="pausebutton" onClick="send_command('pause')"><img src="pause.png"></img></div>
             <div class="button" id="stopbutton" onClick="send_command('stop')"><img src="stop.png"></img></div>
             <div class="button" id="fullstopbutton" onClick="send_command('fullstop')"><img src="eject.png"></img></div>
+            <div class="button" id="prevchapbutton" onClick="send_command('prev_chapter')"><img src="prev.png"></img></div>
+            <div class="button" id="nextchapbutton" onClick="send_command('next_chapter')"><img src="next.png"></img></div>
             <div id="searchbar"><input type="search" name="filter" id="search" value="" tabindex=1 /></div>
           </div>
         </div>
